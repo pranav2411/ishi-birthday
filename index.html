@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Happy Birthday Ishita ❤️</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>🎉 Happy Birthday Ishita 🎂</h1>
 
+  <!-- Birthday Heading -->
+  <h1 class="title">❤️ Happy Birthday Ishita 🎂</h1>
+
+  <!-- Navigation -->
   <div class="nav">
     <a href="index.html">Home</a>
     <a href="stickers.html">Stickers</a>
@@ -15,20 +20,26 @@
     <a href="letter.html">Letter</a>
   </div>
 
-  <div class="message-box">
-    <p>My dearest Ishita, 💖</p>
-    <p>Today is the day the most amazing soul came into this world. 🌍</p>
-    <p>Your smile brightens my darkest days and your love is my greatest treasure. 💫</p>
-    <p>I love you endlessly. 💘</p>
+  <!-- Music Control Below Heading and Nav -->
+  <div class="music-center">
+    <button id="musicBtn">🔊 Play Music</button>
   </div>
 
-  <!-- Music Button -->
-  <button class="music-btn" onclick="openMusic()">🎵</button>
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="https://mp3indirdur.life/Lauv-I-Like-Me-Better-132102?dinle=1" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
 
-  <script>
-    function openMusic() {
-      window.open("https://youtu.be/jYTGnTv-CKg?si=sJi4lgF1rcMwv7Ap", "_blank", "width=400,height=300");
-    }
-  </script>
+  <!-- Birthday Message -->
+  <div class="message-box">
+    <p>My dearest Ishita, 💖</p>
+    <p>On this special day, I want you to know how deeply you're loved.</p>
+    <p>Your laughter is my favorite melody, your smile my brightest light. 🌟</p>
+    <p>Thank you for being the sunshine in my life. ☀️</p>
+    <p>Forever yours, with all my love. 💌</p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
