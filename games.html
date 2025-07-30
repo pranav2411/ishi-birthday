@@ -1,0 +1,97 @@
+<!-- games.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Games for Ishita 🎮</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-image: url('https://em-content.zobj.net/source/microsoft-teams/363/growing-heart_1f497.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: float 4s linear forwards;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% { bottom: 0; opacity: 1; }
+      100% { bottom: 100%; opacity: 0; }
+    }
+
+    .music-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: deeppink;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 0 10px hotpink;
+    }
+
+    .music-button:hover {
+      background-color: hotpink;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="stickers.html">Stickers</a>
+    <a href="games.html">Games</a>
+    <a href="letter.html">Letter</a>
+  </div>
+
+  <button class="music-button" onclick="toggleMusic()">🎵 Play Music</button>
+
+  <h1>💘 Love Click Game for Ishita</h1>
+  <div class="message-box">
+    <p>Click the heart below as many times as you can — each one sends a little love to Ishita! 💖</p>
+    <p>Score: <span id="score">0</span></p>
+    <img src="https://em-content.zobj.net/source/microsoft-teams/363/growing-heart_1f497.png" width="80" style="cursor:pointer;" onclick="popHeart()" />
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="https://mp3indirdur.life/Gym-Class-Heroes-Take-a-Look-at-My-Girlfriend-272236?dinle=1" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    let score = 0;
+    function popHeart() {
+      score++;
+      document.getElementById("score").textContent = score;
+
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.bottom = '0px';
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 4000);
+    }
+
+    const music = document.getElementById('bg-music');
+    let playing = false;
+    function toggleMusic() {
+      if (playing) {
+        music.pause();
+        document.querySelector('.music-button').textContent = '🎵 Play Music';
+      } else {
+        music.play();
+        document.querySelector('.music-button').textContent = '⏸ Pause Music';
+      }
+      playing = !playing;
+    }
+  </script>
+</body>
+</html>

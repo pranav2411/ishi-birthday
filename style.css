@@ -1,0 +1,84 @@
+/* style.css */
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 20px;
+  color: pink;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px pink, 0 0 20px deeppink, 0 0 30px hotpink;
+  }
+  to {
+    text-shadow: 0 0 20px deeppink, 0 0 30px hotpink, 0 0 40px pink;
+  }
+}
+
+.nav {
+  margin: 20px 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  background-color: deeppink;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.nav a:hover {
+  background-color: hotpink;
+}
+
+.message-box {
+  margin-top: 30px;
+  background-color: rgba(255, 105, 180, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+  max-width: 90%;
+}
+
+.message-box p {
+  font-size: 1.2em;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+/* Music Button */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: deeppink;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5em;
+  box-shadow: 0 0 10px hotpink, 0 0 20px pink;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.music-btn:hover {
+  background-color: hotpink;
+}
+
+.video-container {
+  margin-top: 30px;
+}

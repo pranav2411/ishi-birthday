@@ -1,0 +1,94 @@
+<!-- stickers.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bubu & Dudu Stickers 🧸</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="stickers.html">Stickers</a>
+    <a href="games.html">Games</a>
+    <a href="letter.html">Letter</a>
+  </div>
+
+  <h1>🧸 Bubu & Dudu Love for Ishita 💕</h1>
+
+  <div class="message-box">
+    <p>Here are some of the cutest Bubu & Dudu stickers, just like our sweetest moments together!</p>
+  </div>
+
+  <!-- Music Control -->
+  <button id="music-btn">🎵 Play Music</button>
+  <audio id="bg-music" loop>
+    <source src="https://mp3indirdur.life/Taylor-Swift-Hey-Stephen-lyrics-29804?dinle=1" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="stickers-gallery">
+    <img src="https://media.tenor.com/tnTcMaEkXzAAAAAm/tonibear-bubu.webp" alt="Bubu and Dudu" />
+    <img src="https://media.tenor.com/Zrr4L_Wd4JkAAAAm/bubu-rub-bubu-love-dudu.webp" alt="Kiss" />
+    <img src="https://media.tenor.com/W8YgPGos_RMAAAAm/kiss.webp" alt="Hug" />
+    <img src="https://media.tenor.com/i9lSIyuNz70AAAAm/bite.webp" alt="Love Bubu" />
+    <img src="https://media.tenor.com/F9Q3thp6tzUAAAAm/bubu-bubu-dudu.webp" alt="Hearts" />
+    <img src="https://media.tenor.com/tW4jk2HaN3YAAAAm/bubu-dudu.webp" alt="Blush" />
+  </div>
+
+  <style>
+    .stickers-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
+    .stickers-gallery img {
+      width: 150px;
+      height: auto;
+      border: 2px solid #ff69b4;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+    .stickers-gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    #music-btn {
+      display: block;
+      margin: 15px auto;
+      padding: 10px 20px;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #music-btn:hover {
+      background: #ff85c1;
+    }
+  </style>
+
+  <script>
+    const musicBtn = document.getElementById("music-btn");
+    const music = document.getElementById("bg-music");
+    let isPlaying = false;
+
+    musicBtn.addEventListener("click", () => {
+      if (!isPlaying) {
+        music.play();
+        musicBtn.textContent = "⏸ Pause Music";
+      } else {
+        music.pause();
+        musicBtn.textContent = "🎵 Play Music";
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+</body>
+</html>
